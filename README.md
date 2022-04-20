@@ -1,4 +1,4 @@
-# styled-jsx with SCSS test using Nextjs v12 Example
+# `styled-jsx` with SCSS test using `storybook-addon-next` Nextjs v12 Example
 
 Addon source: https://github.com/RyanClementsHax/storybook-addon-next
 
