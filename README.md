@@ -1,6 +1,6 @@
-# Nextjs v12 Example
+# styled-jsx with SCSS test using Nextjs v12 Example
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Addon source: https://github.com/RyanClementsHax/storybook-addon-next
 
 ## Getting Started
 
@@ -12,25 +12,38 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the `Styled JSX SCSS Example` page:
+http://localhost:3000/styledJsxScss
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+See the text is green with nested SCSS selectors
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Next, run Storybook server:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run storybook
+# or
+yarn storybook
+```
 
-## Learn More
+Storybook fails to start with this error:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+ModuleBuildError: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: ~/storybook-addon-next-scss/pages/styledJsxScss.js: Nesting detected at 5:11. Unfortunately nesting is not supported by styled-jsx.
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Disabling the **storybook-addon-next** in `.storybook/main.js` addon solves the problem.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Note: SCSS support works with both the `@storybook/preset-scss` addon or with a webpack rule:
 
-## Deploy on Vercel
+```js
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ["style-loader", "css-loader", "sass-loader"],
+      include: require("path").resolve(__dirname, "../"),
+    });
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    return config;
+  },
+```
