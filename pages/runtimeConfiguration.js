@@ -1,6 +1,7 @@
-import { Header } from 'components/Header'
-import getConfig from 'next/config'
-import Head from 'next/head'
+import getConfig from "next/config";
+import Head from "next/head";
+
+import { Header } from "../components/Header";
 
 export default function RuntimeConfiguration() {
   return (
@@ -17,5 +18,5 @@ export default function RuntimeConfiguration() {
         </code>
       </main>
     </div>
-  )
+  );
 }

@@ -1,5 +1,6 @@
-import { Header } from 'components/Header'
-import Head from 'next/head'
+import Head from "next/head";
+
+import { Header } from "../components/Header";
 
 export default function CssModules() {
   return (
@@ -17,5 +18,5 @@ export default function CssModules() {
         </p>
       </main>
     </div>
-  )
+  );
 }

@@ -1,10 +1,11 @@
-import { Header } from 'components/Header'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
+import Head from "next/head";
+import { useRouter } from "next/router";
+
+import { Header } from "../components/Header";
 
 export default function NextjsRouting() {
-  const router = useRouter()
-  console.log('this is the router NextjsRouting received 👉', router)
+  const router = useRouter();
+  console.log("this is the router NextjsRouting received 👉", router);
   return (
     <div>
       <Head>
@@ -26,5 +27,5 @@ export default function NextjsRouting() {
         </pre>
       </main>
     </div>
-  )
+  );
 }

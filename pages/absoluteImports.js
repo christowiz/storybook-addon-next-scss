@@ -1,6 +1,7 @@
-import { Header } from 'components/Header'
-import { MyComponent } from 'components/MyComponent'
-import Head from 'next/head'
+import Head from "next/head";
+
+import { Header } from "../components/Header";
+import { MyComponent } from "../components/MyComponent";
 
 export default function AbsoluteImports() {
   return (
@@ -15,5 +16,5 @@ export default function AbsoluteImports() {
         <MyComponent>Im absolutely imported</MyComponent>
       </main>
     </div>
-  )
+  );
 }

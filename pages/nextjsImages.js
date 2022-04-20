@@ -1,7 +1,8 @@
-import { Header } from 'components/Header'
-import Image from 'next/image'
-import Head from 'next/head'
-import nyanCatImgSrc from 'public/nyan-cat.png'
+import Image from "next/image";
+import Head from "next/head";
+
+import { Header } from "../components/Header";
+import nyanCatImgSrc from "../public/nyan-cat.png";
 
 export default function NextjsImages() {
   return (
@@ -25,5 +26,5 @@ export default function NextjsImages() {
         />
       </main>
     </div>
-  )
+  );
 }

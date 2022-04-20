@@ -1,5 +1,6 @@
-import { Header } from 'components/Header'
-import Head from 'next/head'
+import Head from "next/head";
+
+import { Header } from "../components/Header";
 
 export default function StyledJsx() {
   return (
@@ -18,5 +19,5 @@ export default function StyledJsx() {
         <p>This is styled using Styled JSX</p>
       </main>
     </div>
-  )
+  );
 }

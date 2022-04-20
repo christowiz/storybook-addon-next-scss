@@ -1,6 +1,7 @@
-import { Header } from 'components/Header'
-import Head from 'next/head'
-import styles from '../styles/ScssModules.module.scss'
+import Head from "next/head";
+
+import { Header } from "../components/Header";
+import styles from "../styles/ScssModules.module.scss";
 
 export default function ScssModules() {
   return (
@@ -14,5 +15,5 @@ export default function ScssModules() {
         <p>This is styled using SCSS Modules</p>
       </main>
     </div>
-  )
+  );
 }

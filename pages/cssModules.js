@@ -1,6 +1,7 @@
-import { Header } from 'components/Header'
-import Head from 'next/head'
-import styles from '../styles/CssModules.module.css'
+import Head from "next/head";
+
+import { Header } from "../components/Header";
+import styles from "../styles/CssModules.module.css";
 
 export default function CssModules() {
   return (
@@ -14,5 +15,5 @@ export default function CssModules() {
         <p>This is styled using CSS Modules</p>
       </main>
     </div>
-  )
+  );
 }

@@ -1,5 +1,6 @@
-import { Header } from 'components/Header'
-import Head from 'next/head'
+import Head from "next/head";
+
+import { Header } from "../components/Header";
 
 export default function Typescript(): JSX.Element {
   return (
@@ -13,5 +14,5 @@ export default function Typescript(): JSX.Element {
         <p>This is a page using typescript</p>
       </main>
     </div>
-  )
+  );
 }
