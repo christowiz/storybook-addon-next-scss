@@ -1,5 +1,6 @@
-import { Header } from "components/Header";
 import Head from "next/head";
+
+import { Header } from "../components/Header";
 
 export default function StyledJsx() {
   return (
@@ -12,12 +13,12 @@ export default function StyledJsx() {
       <style jsx>{`
         .main {
           p {
-            color: blue;
+            color: green;
           }
         }
       `}</style>
       <main className="main">
-        <p>This is styled using Styled JSX with SCSS</p>
+        <p>This is styled using a nested SCSS selector with styled-jsx</p>
       </main>
     </div>
   );
