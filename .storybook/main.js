@@ -1,9 +1,9 @@
 module.exports = {
   addons: [
-    // "storybook-addon-next",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-scss",
+    // "@storybook/preset-scss",
+    // "storybook-addon-next",
   ],
   core: {
     builder: "webpack5",
@@ -13,13 +13,13 @@ module.exports = {
     "../stories/**/*.stories.mdx",
     "../stories/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  // webpackFinal: async (config) => {
-  //   config.module.rules.push({
-  //     test: /\.scss$/,
-  //     use: ["style-loader", "css-loader", "sass-loader"],
-  //     include: require("path").resolve(__dirname, "../"),
-  //   });
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ["style-loader", "css-loader", "sass-loader"],
+      include: require("path").resolve(__dirname, "../"),
+    });
 
-  //   return config;
-  // },
+    return config;
+  },
 };
