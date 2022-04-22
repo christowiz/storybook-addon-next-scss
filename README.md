@@ -13,7 +13,7 @@ yarn dev
 ```
 
 Go to the `Styled JSX SCSS Example` page:
-http://localhost:3000/styledJsxScss
+http://localhost:3000/
 
 See the text is green with nested SCSS selectors
 
@@ -29,7 +29,7 @@ Storybook fails to start with this error:
 
 ```bash
 ModuleBuildError: Module build failed (from ./node_modules/babel-loader/lib/index.js):
-Error: ~/storybook-addon-next-scss/pages/styledJsxScss.js: Nesting detected at 5:11. Unfortunately nesting is not supported by styled-jsx.
+Error: ~/storybook-addon-next-scss/pages/index.js: Nesting detected at 5:11. Unfortunately nesting is not supported by styled-jsx.
 ```
 
 Disabling the **storybook-addon-next** in `.storybook/main.js` addon solves the problem.
